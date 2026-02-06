@@ -25,12 +25,15 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- ENCABEZADO ---
-# Usamos columnas para centrar o poner logo si quisieras
-col1, col2, col3 = st.columns([1, 6, 1])
+# --- ENCABEZADO CON LOGO ---
+col1, col2, col3 = st.columns([1, 2, 1])
+
 with col2:
-    st.markdown('<p class="big-font">Banfield Pet Hospital 🏥</p>', unsafe_allow_html=True)
-    st.caption("Herramienta de Retención de Clientes")
+      # Ajusta el width (ancho) si lo ves muy grande o chico
+    st.image("banfield.png", width=250) 
+    
+    # Texto debajo del logo (opcional, si el logo ya dice Banfield puedes borrar la siguiente linea)
+    st.markdown('<p style="text-align: center; color: #004C85; font-weight: bold;">Herramienta de Retención</p>', unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -127,4 +130,5 @@ if st.button("CALCULAR BENEFICIO"):
 
 # Pie de página
 st.markdown("---")
+
 st.caption("Banfield Pet Hospital Internal Tool")
