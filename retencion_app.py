@@ -25,15 +25,17 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- ENCABEZADO CON LOGO ---
-col1, col2, col3 = st.columns([1, 2, 1])
+# --- ENCABEZADO PRO (Logo centrado y controlado) ---
+# Creamos 3 columnas: [Espacio, LOGO, Espacio]
+# Los números [3, 2, 3] definen el ancho. Los lados son anchos para empujar el centro.
+col_izq, col_centro, col_der = st.columns([3, 2, 3])
 
-with col2:
-      # Ajusta el width (ancho) si lo ves muy grande o chico
-    st.image("banfield.png", width=250) 
-    
-    # Texto debajo del logo (opcional, si el logo ya dice Banfield puedes borrar la siguiente linea)
-    st.markdown('<p style="text-align: center; color: #004C85; font-weight: bold;">Herramienta de Retención</p>', unsafe_allow_html=True)
+with col_centro:
+    # 'use_container_width=True' hace que la imagen se ajuste EXACTO al ancho de la columna central (que es pequeña)
+    st.image("banfield_logo.png", use_container_width=True) 
+
+# Título debajo del logo
+st.markdown("<h3 style='text-align: center; color: #004C85;'>Herramienta de Retención</h3>", unsafe_allow_html=True)
 
 st.markdown("---")
 
@@ -132,3 +134,4 @@ if st.button("CALCULAR BENEFICIO"):
 st.markdown("---")
 
 st.caption("Banfield Pet Hospital Internal Tool")
+
