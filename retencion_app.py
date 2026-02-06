@@ -32,7 +32,7 @@ col_izq, col_centro, col_der = st.columns([3, 2, 3])
 
 with col_centro:
     # 'use_container_width=True' hace que la imagen se ajuste EXACTO al ancho de la columna central (que es pequeña)
-    st.image("banfield_logo.png", use_container_width=True) 
+    st.image("banfield.png", use_container_width=True) 
 
 # Título debajo del logo
 st.markdown("<h3 style='text-align: center; color: #004C85;'>Herramienta de Retención</h3>", unsafe_allow_html=True)
@@ -134,4 +134,5 @@ if st.button("CALCULAR BENEFICIO"):
 st.markdown("---")
 
 st.caption("Banfield Pet Hospital Internal Tool")
+
 
